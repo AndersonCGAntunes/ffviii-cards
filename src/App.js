@@ -16,6 +16,7 @@ function App() {
 
   const onRangeChange = (e) => {
     setRangeValue(parseInt(e.target.value, 10));
+
   };
 
   useEffect(() => {
