@@ -8,8 +8,8 @@ const CardDetails = ({ cardData }) => {
     <div className='eleDetails'>
       <h3>Detalhes da carta</h3>
       <p><strong>Elemental:</strong> {elemental}</p>
-      <p><strong>Card Modification:</strong> {cardMod}</p>
-      <p><strong>How to Obtain:</strong></p>
+      <p><strong>Pode Modificar em:</strong> {cardMod}</p>
+      <p><strong>Como Obter:</strong></p>
       <ul>
         {howToObtain.map((element, index) => (
           <li key={index}>{element}</li>

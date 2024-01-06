@@ -10,13 +10,35 @@ function App() {
   const [selectedCardName, setSelectedCardName] = useState(Object.keys(CardData.data[0])[0]);
   const [rangeValue, setRangeValue] = useState(1);
 
+  const cardType = ["Monster", "Boss", "Guardian Force", "Player"];
+
+  const monstraTipo = (escolha) => {
+    switch (escolha) {
+      case 1:
+      case 2:
+      case 3:
+      case 4:
+      case 5:
+        return cardType[0];
+      case 6:
+      case 7:
+        return cardType[1];
+      case 8:
+      case 9:
+        return cardType[2];
+      case 10:
+        return cardType[3];
+      default:
+        return null;
+    }
+  }
+
   const onSelectCard = (cardName) => {
     setSelectedCardName(cardName);
   };
 
   const onRangeChange = (e) => {
     setRangeValue(parseInt(e.target.value, 10));
-
   };
 
   useEffect(() => {
@@ -32,6 +54,8 @@ function App() {
 
   const cardId = CardData.data.find(card => Object.keys(card)[0] === selectedCardName)?.[selectedCardName]?.id;
 
+  const tipoDaCarta = monstraTipo(rangeValue);
+
   return (
     <div className="App">
       <header className="App-header">
@@ -39,8 +63,8 @@ function App() {
       </header>
       <div className='container'>
         <div className='level'>
-          <p className='lblLevel'>Cartas nível {rangeValue}</p>
-          <input defaultValue={1} type="range" className='barra' name="level" min="1" max="10" onChange={onRangeChange} />
+          <p className='lblLevel'>Cartas nível {rangeValue} <span className='cardType'>[Cartas do tipo {tipoDaCarta}]</span></p>
+          <input type="range" defaultValue={1} className='barra' name="level" min="1" max="10" onChange={onRangeChange} />
         </div>
         <div className='lista'>
           <CardList cards={{data: visibleCards}} onSelectCard={onSelectCard} valorDefault={selectedCardName} />
