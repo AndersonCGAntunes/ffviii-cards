@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/ffviii-cards/static/css/main.a3649394.css",
+    "main.js": "/ffviii-cards/static/js/main.97d13f4c.js",
+    "static/js/787.11e272b0.chunk.js": "/ffviii-cards/static/js/787.11e272b0.chunk.js",
+    "index.html": "/ffviii-cards/index.html",
+    "main.a3649394.css.map": "/ffviii-cards/static/css/main.a3649394.css.map",
+    "main.97d13f4c.js.map": "/ffviii-cards/static/js/main.97d13f4c.js.map",
+    "787.11e272b0.chunk.js.map": "/ffviii-cards/static/js/787.11e272b0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a3649394.css",
+    "static/js/main.97d13f4c.js"
+  ]
+}
